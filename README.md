@@ -1,6 +1,6 @@
-Ò»¸öÒ×ÓÃµÄUnityLua¿ò¼Ü
+#ä¸€ä¸ªæ˜“ç”¨çš„UnityLuaæ¡†æž¶
 
-#ÒÑ¶¨ÒåÀàÐÍ
+#å·²å®šä¹‰ç±»åž‹
 UnityEngine		= luanet.UnityEngine
 System			= luanet.System
 Debug			= UnityEngine.Debug
@@ -12,7 +12,7 @@ Time			= UnityEngine.Time
 GUI				= UnityEngine.GUI
 Rect			= UnityEngine.Rect
 
-#ÒÑ¶¨Òåº¯Êý
+#å·²å®šä¹‰å‡½æ•°
 function Print(str)
 function Error(str)
 function require(filename)
@@ -34,4 +34,3 @@ function Update()
 	--Print('Update:' .. Time.deltaTime)
 	transform:RotateAround(Vector3.zero, Vector3.up,20 * Time.deltaTime)
 end
-
