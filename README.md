@@ -33,18 +33,23 @@ function Find(str)
 #demo
 
 function Awake()
+
 	Print('Awake Time:' .. Time.time)
+    
 end
 
 function Start()
+
 	Debug.Log("test2 lua Start");
     
 	Print(gameObject.name);
     
 	transform.localPosition = Vector3(-100,0,0)
+    
 end
 
 function Update()
+
 	--Print('Update:' .. Time.deltaTime)
     
 	transform:RotateAround(Vector3.zero, Vector3.up,20 * Time.deltaTime)
