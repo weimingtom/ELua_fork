@@ -1,0 +1,34 @@
+require('demo2')
+
+function Awake()
+	Print('Awake Time:' .. Time.time)
+end
+
+function Start()
+	Debug.Log("test2 lua Start");
+	Print(gameObject.name);
+	transform.localPosition = Vector3(-100,0,0)
+end
+
+function Update()
+	--Print('Update:' .. Time.deltaTime)
+	transform:RotateAround(Vector3.zero, Vector3.up,20 * Time.deltaTime)
+end
+
+function OnGUI()
+	if GUI.Button(Rect(10,10,100,100),"button") then
+		Print('Click Button!!!')
+	end
+end
+
+function OnEnable()
+	Print('OnEnable')
+end 
+
+function OnDisable()
+	Print('OnDisable')
+end
+
+function OnDestroy()
+	Print('OnDestroy')
+end
