@@ -2,14 +2,23 @@
 
 #已定义类型
 UnityEngine		= luanet.UnityEngine
+
 System			= luanet.System
+
 Debug			= UnityEngine.Debug
+
 GameObject		= UnityEngine.GameObject
+
 Transfrom		= UnityEngine.Transfrom
+
 Vector2			= UnityEngine.Vector2
+
 Vector3			= UnityEngine.Vector3
+
 Time			= UnityEngine.Time
+
 GUI				= UnityEngine.GUI
+
 Rect			= UnityEngine.Rect
 
 #已定义函数
