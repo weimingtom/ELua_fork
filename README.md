@@ -1,56 +1,47 @@
-#一个易用的UnityLua框架
+ELua 是基于KopiLua和LuaInterface的一款Unity3d的lua脚本框架。可以在Unity3d中快速的加入Lua脚本支持。
 
-#已定义类型
-UnityEngine		= luanet.UnityEngine
+Git地址:http://git.oschina.net/ximu/UnityLuaFramework.git
 
-System			= luanet.System
+特性:
 
-Debug			= UnityEngine.Debug
+1)使用简单，基于KopiLua全平台支持
+2)基础类型定义，无需重复工作
+3)自动释放Unity中Lua到指定平台，方便脚本更新
+4)require脚本包含支持
+5)MonoBehaviour流程Lua中自动调用
+6)多层目录支持
 
-GameObject		= UnityEngine.GameObject
 
-Transfrom		= UnityEngine.Transfrom
+#目录结构------------------
 
-Vector2			= UnityEngine.Vector2
+	/ELua   		lua框架
+	/ELua/KopiLua 		KopiLua主程序和Luainterface 等依赖Dll
+	/ELua/Resources		框架依赖资源
+	/ELua/Resources/LuaBase 框架基础Lua脚本
+	/Demo			框架使用demo
 
-Vector3			= UnityEngine.Vector3
+#--------------------------
 
-Time			= UnityEngine.Time
 
-GUI				= UnityEngine.GUI
+简单使用:
 
-Rect			= UnityEngine.Rect
+1)
+ELua会从Resources/Scripts/Lua 中加载lua脚本
 
-#已定义函数
-function Print(str)
+创建lua代码demo.lua.txt
+	
+	function Start()
+		Print('Start')
+	end
 
-function Error(str)
+2)
+在Gameobjcet上添加组件Elua
+在Elua的Script的变量中填入demo
 
-function require(filename)
+3）
+运行游戏即可在console中看到Lua脚本打印的日志
 
-function Find(str)
-
-#demo
-
-function Awake()
-
-	Print('Awake Time:' .. Time.time)
-    
-end
-
-function Start()
-
-	Debug.Log("test2 lua Start");
-    
-	Print(gameObject.name);
-    
-	transform.localPosition = Vector3(-100,0,0)
-    
-end
-
-function Update()
-
-	--Print('Update:' .. Time.deltaTime)
-    
-	transform:RotateAround(Vector3.zero, Vector3.up,20 * Time.deltaTime)
-end
+其他说明:
+1）文件夹需要添加__pack__.txt 文件内容添加当前文件夹相对路径。ELua才可以按目录将Lua代码释放到指定平台中。
+2）调用ELuaHelper.Release() 可以将Resources/Scripts/Lua 中脚本释放到文件中。
+3）webplayer下会直接运行包含在Unity中的Lua代码，而不释放出来。
