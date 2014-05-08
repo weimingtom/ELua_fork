@@ -66,7 +66,7 @@ public class FileLog
                         mPath = Application.persistentDataPath + "/Log/";
                         break;
                     case RuntimePlatform.Android:
-                        mPath = "/sdcard/.javgame/Log/";
+                        mPath = "/sdcard/.Log/";
                         break;
                 }
             }
