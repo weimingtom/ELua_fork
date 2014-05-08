@@ -1,4 +1,4 @@
-require('demo2')
+﻿require('demo2')
 
 timeShow = 0
 
@@ -23,9 +23,9 @@ function Update()
 end
 
 function OnGUI()
-	--if GUI.Button(Rect(10,10,100,100),"button") then
-	--	Print('Click Button!!!')
-	--end
+	if GUI.Button(Rect(10,10,100,100),"button") then
+		Print('Click Button!!!')
+	end
 
 	GUI.Label(Rect(10,10,100,100),'运行时间:'..timeShow)
 end
