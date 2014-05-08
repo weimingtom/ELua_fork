@@ -12,8 +12,6 @@ function Start()
 	transform.localPosition = Vector3(-100,0,0)
 	obj1 = Create('test1')
 	Create('test2').transform.parent = obj1.transform
-
-	GameObject.CreatePrimitive(UnityEngine.PrimitiveType.Cube)
 end
 
 function Update()

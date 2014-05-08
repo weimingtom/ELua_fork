@@ -1,0 +1,33 @@
+--常用函数定义
+
+--打印日志
+function Print(str)
+	Debug.Log(str)
+end
+
+--错误日志
+function Error(str)
+	Debug.LogError(str)
+end
+
+--Lua调试日志
+function DLog(str)
+	if IsDebug then
+		Debug.Log(str)
+	end
+end
+
+--包含文件
+function require(filename)
+	DLog('require file:' .. filename)
+	if not LuaUnity:Require(filename) then
+		Error(filename .. ' require file fail!')
+	end
+end
+
+--查找对象
+function Find(str)
+	return GameObject.Find(str)
+end
+
+DLog('func.lua load')

@@ -1,1 +1,5 @@
 Print('demo2')
+
+function Create(name)
+	return GameObject(name)
+end

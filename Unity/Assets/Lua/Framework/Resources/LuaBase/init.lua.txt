@@ -1,9 +1,0 @@
---lua框架入口
-
---载入定义
-LuaUnity:requireBase('define')
-
---载入函数库
-LuaUnity:requireBase('func')
-
-DLog('init finish')
