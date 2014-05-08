@@ -2,7 +2,7 @@
 
     ELua 是基于KopiLua和LuaInterface的一款Unity3d的lua脚本框架。可以在Unity3d中快速的加入Lua脚本支持。
 
-![demo](http://git.oschina.net/ximu/ELua/blob/master/Src/Images/demo.png "demo")
+![demo](http://git.oschina.net/ximu/ELua/raw/master/Src/Images/demo.png "demo")
 
 #特性:
 
