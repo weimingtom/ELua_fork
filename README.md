@@ -2,7 +2,7 @@
 
     ELua 是基于KopiLua和LuaInterface的一款Unity3d的lua脚本框架。可以在Unity3d中快速的加入Lua脚本支持。
 
-    Git地址:http://git.oschina.net/ximu/UnityLuaFramework.git
+![demo](http://git.oschina.net/ximu/ELua/blob/master/Src/Images/demo.png "demo")
 
 #特性:
 
@@ -16,7 +16,7 @@
 
 #目录结构
 
-	/ELua   		        #lua框架
+    /ELua   		        #lua框架
 	/ELua/KopiLua 		        #KopiLua主程序和Luainterface 等依赖Dll
 	/ELua/Resources		        #框架依赖资源
 	/ELua/Resources/LuaBase		#框架基础Lua脚本
